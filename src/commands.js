@@ -13,7 +13,7 @@ In current implementation, runCommand supports simple slash commands with this f
 /commandName optionalArg1 optionalArg2 
 No quoted argument parsing
 */
-function runCommand(input, context) {
+function handleSlashCommand(input, context) {
   const text = input.trim();
 
   if (!text.startsWith("/")) {
@@ -37,4 +37,4 @@ function runCommand(input, context) {
   return { handled: true, message };
 }
 
-module.exports = { runCommand, commands };
+module.exports = { handleSlashCommand, commands };
